@@ -1,0 +1,34 @@
+<header>
+    <a id="btn_back" href="/" class="btn btn-default fl_r" >
+        Back
+    </a>
+    <h2>
+        Faves
+    </h2>
+</header>
+
+<div class="content row">
+    <% for(var i = 0, l = items.length; i < l; ++i) { %>
+    <div class="col-xs-12 delimiter">
+        <div class="row">
+            <div class="col-xs-3">
+                <img src="<%- items[i].thumb_url %>" alt="" />
+            </div>
+
+            <div class="col-xs-9">
+                <button id="remove_fave" data-id="<%- items[i].id %>" class="btn btn-default fl_r btn-warning" >
+                    <span class="glyphicon glyphicon-star"></span>
+                </button>
+                <div><a href="/faves/<%- items[i].id %>"><%- items[i].title %></a></div>
+                <div>
+                    <%- items[i].summary %>
+                </div>
+                <div>
+                    <%- items[i].price_formatted %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% } %>
+
+</div>

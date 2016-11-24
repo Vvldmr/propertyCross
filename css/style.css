@@ -1,0 +1,74 @@
+.fl_l{
+    float: left;
+}
+.fl_r{
+    float: right;
+}
+.delimiter{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+header{
+    border-bottom: 1px solid #e4e4e4;
+    max-width: 1100px;
+    margin: 0 auto 20px;
+}
+.content{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.form-search button{
+    width: 100%;
+}
+
+.status-search .status-search--title{
+    margin-bottom: 10px;
+}
+.status-search .status-search--content ul{
+    border: 1px solid #444;
+    list-style: none;
+}
+.status-search .status-search--content li{
+    cursor: pointer;
+}
+.form-control--danger{
+    border-color: #d9534f;
+}
+
+.house-item{
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 40px;
+}
+.house-item .row{
+    padding: 0 10px;
+}
+.house-item--title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.house-item--image > div {
+    max-width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+.house-item--summary{
+    height: 60px;
+    overflow: hidden;
+}
+.load{
+    text-align: center;
+}
+.count-on-page{
+    text-align: right;
+    margin: 0 0 20px;
+    font-size: 19px;
+}

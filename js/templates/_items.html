@@ -1,0 +1,28 @@
+<header>
+    <a id="btn_back" href="/" class="btn btn-default fl_r" >
+        Back
+    </a>
+    <h2>
+        Search by <% if(isLocation){ %>location<% }else{ %>city<% } %>: <b><%- searchString %></b>
+    </h2>
+</header>
+
+<div class="content row">
+    <div class="row">
+        <div class="col-xs-12 count-on-page">
+            <span id="count_show_on_page"><%= count %></span> of <%= resultCount %> matches
+        </div>
+    </div>
+
+    <div id="show_items" class="row status-search">
+
+    </div>
+
+    <% if(resultCount > count) { %>
+    <div class="load">
+        <button id="load_more_btn" class="btn btn-default">Load more...</button>
+    </div>
+    <% } %>
+
+
+</div>

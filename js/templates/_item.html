@@ -1,0 +1,52 @@
+<header>
+    <a id="btn_back" href="/<%= isFavePage ? 'faves' : 'search' %>" class="btn btn-default fl_r" >
+        Back
+    </a>
+    <button id="add_fave" class="btn btn-default fl_r <%= isFave ? 'btn-warning' : '' %>" >
+        <span class="glyphicon glyphicon-star"></span>
+    </button>
+    <h2>
+        <%- title %>
+    </h2>
+</header>
+
+<div class="content row">
+    <div class="col-xs-12 house-item">
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="<%- img_url %>" alt="" />
+            </div>
+            <br><br>
+            <div class="col-xs-12">
+                <div>
+                    <%- summary %>
+                </div>
+                <br>
+                <table class="table">
+                    <tr>
+                        <td>Price</td>
+                        <td><%- price_formatted %></td>
+                    </tr>
+                    <tr>
+                        <td>Bathroom number</td>
+                        <td><%- bathroom_number %></td>
+                    </tr>
+                    <tr>
+                        <td>Bedroom number</td>
+                        <td><%- bedroom_number %></td>
+                    </tr>
+                    <tr>
+                        <td>Car spaces</td>
+                        <td><%- car_spaces %></td>
+                    </tr>
+
+                    <tr>
+                        <td>Origin page</td>
+                        <td><a href="<%- lister_url %>" target="_blank">Here...</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>

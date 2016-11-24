@@ -1,0 +1,59 @@
+<header>
+    <a href="/faves" class="btn btn-default fl_r" >
+        <span class="glyphicon glyphicon-star"></span> Faves <span id="faves_count"><%= favesLength %></span>
+    </a>
+    <h2>
+        <a href="/">PropertyCross</a>
+    </h2>
+</header>
+
+<div class="content row">
+    <div class="row">
+        <div class="col-xs-12">
+            Use the form below to search for houses to buy.
+            You can search by place-name, postcode, or click 'My location',
+            to search in your current location!
+        </div>
+    </div>
+
+    <div class="row form-search">
+        <div class="col-xs-12 col-md-7">
+            <input id="field_search" type="text" class="form-control" value="london" placeholder="London..." >
+        </div>
+        <div class="col-xs-4 col-md-2">
+            <button id="btn_search" class="btn btn-default">Go</button>
+        </div>
+        <div class="col-xs-8 col-md-3">
+            <!--<button class="btn btn-default">My locate</button>-->
+            <select id="search_type" class="form-control">
+                <option value="name">Search by city</option>
+                <option value="loc">Search by location</option>
+            </select>
+
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row error-search">
+        <div id="error_search" class="col-xs-12"></div>
+    </div>
+
+    <% if(lastSearches.length) { %>
+    <div class="row status-search">
+        <div class="col-xs-12 status-search--title">
+            Recent search:
+        </div>
+        <div class="col-xs-12 status-search--content">
+            <ul>
+                <% for(var i = 0, l = lastSearches.length; i < l; ++i) { %>
+                    <li data-id="<%- lastSearches[i].id %>">
+                        <%- lastSearches[i].title + ' (' + lastSearches[i].count + ')' %>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+    <% } %>
+
+</div>
