@@ -18,11 +18,13 @@ define([
         },
 
 		addFave: function () {
+            debugger;
             if(this.fave){
                 Faves.get(this.fave.get('id')).destroy();
+                this.fave = false;
                 this.$('#add_fave').removeClass('btn-warning');
             }else{
-                Faves.add(this.item.toJSON());
+                this.fave = Faves.add(this.item.toJSON());
                 this.$('#add_fave').addClass('btn-warning');
             }
 		},

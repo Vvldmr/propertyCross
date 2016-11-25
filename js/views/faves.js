@@ -11,15 +11,16 @@ define([
         collection: null,
 
         events: {
-            'click #remove_fave': 'removeFave'
+            'click .remove_fave': 'removeFave'
         },
 
 		initialize: function (collection) {
             this.collection = collection;
 		},
 
-        removeFave: function () {
-            var el = this.$("#remove_fave");
+        removeFave: function (e) {
+            var el = $(e.currentTarget);
+
             this.collection.get(el.data('id')).destroy();
             el.parent().parent().parent().remove();
         },
